@@ -82,7 +82,7 @@ def game_strat_1(board):
         return board_dash,counter
 
 def plot_game_strat_1(n):
-    allowed_mines = np.arange(0,m.factorial(n))
+    allowed_mines = list(np.arange(0,m.factorial(n)))
     allowed_mines_copy = allowed_mines.copy()
     for i in allowed_mines:
         if gameboard(n,i)[n-1,n-1]>=100:
@@ -99,4 +99,4 @@ def plot_game_strat_1(n):
     plt.bar(x_axis,no_of_steps)
     return plt.show()
 
-print(plot_game_strat_1(5))
+plot_game_strat_1(5)
